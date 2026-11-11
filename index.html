@@ -1,0 +1,2591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#5e0e1a" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<title>Shafanna Solutions — Detroit</title>
+<meta name="description" content="Shafanna Solutions is a proposed, Black-founded nonprofit in formation in Detroit, Michigan. One entry point. Coordinated wraparound services. A pathway forward.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coloredinnovator.github.io/shafanna-solutions/">
+<link rel="canonical" href="https://coloredinnovator.github.io/shafanna-solutions/">
+<meta property="og:title" content="Shafanna Solutions — Detroit">
+<meta property="og:description" content="Shafanna Solutions is a proposed, Black-founded nonprofit in formation in Detroit, Michigan. One entry point. Coordinated wraparound services. A pathway forward.">
+<meta property="og:image" content="https://coloredinnovator.github.io/shafanna-solutions/assets/og-detroit.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Detroit skyline across the Detroit River on a clear day">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shafanna Solutions — Detroit">
+<meta name="twitter:description" content="Shafanna Solutions is a proposed, Black-founded nonprofit in formation in Detroit, Michigan. One entry point. Coordinated wraparound services. A pathway forward.">
+<meta name="twitter:image" content="https://coloredinnovator.github.io/shafanna-solutions/assets/og-detroit.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+@layer reset, base, theme, components, utilities;
+
+@layer theme {
+  :root {
+    color-scheme: light dark;
+
+    /* Brand & Accent */
+    --maroon: #5e0e1a;
+    --maroon-deep: #3b0710;
+    --maroon-mid: #781524;
+    --gold: #c5a059;
+    --gold-light: #e5cf99;
+    --gold-dark: #7a5b1d;
+
+    /* Light tokens */
+    --surface-light: #ffffff;
+    --surface-alt-light: #f6f4ef;
+    --surface-card-light: #ffffff;
+    --surface-inset-light: #efece4;
+    --ink-light: #111318;
+    --ink-soft-light: #434853;
+    --line-light: #dbd5ca;
+    --line-strong-light: #80786b;
+    --header-light: rgba(255, 255, 255, .94);
+    --brand-ink-light: #5e0e1a;
+    --eyebrow-light: #7a5b1d;
+    --focus-light: #5e0e1a;
+    --giving-bg-light: #faf6eb;
+    --giving-border-light: #9e8140;
+
+    /* Dark tokens — neutral executive slate */
+    --surface-dark: #0e1116;
+    --surface-alt-dark: #151921;
+    --surface-card-dark: #1a1f29;
+    --surface-inset-dark: #11151d;
+    --ink-dark: #f2f4f7;
+    --ink-soft-dark: #b9c1cc;
+    --line-dark: #2c3340;
+    --line-strong-dark: #6b768a;
+    --header-dark: rgba(14, 17, 22, .94);
+    --brand-ink-dark: #f2f4f7;
+    --eyebrow-dark: #e2c88d;
+    --focus-dark: #e5cf99;
+    --giving-bg-dark: #191815;
+    --giving-border-dark: #b3924f;
+
+    /* Active semantic tokens */
+    --bg: var(--surface-light);
+    --paper: var(--surface-alt-light);
+    --card: var(--surface-card-light);
+    --inset: var(--surface-inset-light);
+    --ink: var(--ink-light);
+    --ink-soft: var(--ink-soft-light);
+    --line: var(--line-light);
+    --line-strong: var(--line-strong-light);
+    --header-bg: var(--header-light);
+    --brand-ink: var(--brand-ink-light);
+    --eyebrow-ink: var(--eyebrow-light);
+    --focus: var(--focus-light);
+    --giving-bg: var(--giving-bg-light);
+    --giving-border: var(--giving-border-light);
+
+    --radius: 2px;
+    --container-max: 76rem;
+    --header-offset: 5.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: var(--surface-dark);
+      --paper: var(--surface-alt-dark);
+      --card: var(--surface-card-dark);
+      --inset: var(--surface-inset-dark);
+      --ink: var(--ink-dark);
+      --ink-soft: var(--ink-soft-dark);
+      --line: var(--line-dark);
+      --line-strong: var(--line-strong-dark);
+      --header-bg: var(--header-dark);
+      --brand-ink: var(--brand-ink-dark);
+      --eyebrow-ink: var(--eyebrow-dark);
+      --focus: var(--focus-dark);
+      --giving-bg: var(--giving-bg-dark);
+      --giving-border: var(--giving-border-dark);
+    }
+  }
+
+  @supports (color: light-dark(white, black)) {
+    :root {
+      --bg: light-dark(var(--surface-light), var(--surface-dark));
+      --paper: light-dark(var(--surface-alt-light), var(--surface-alt-dark));
+      --card: light-dark(var(--surface-card-light), var(--surface-card-dark));
+      --inset: light-dark(var(--surface-inset-light), var(--surface-inset-dark));
+      --ink: light-dark(var(--ink-light), var(--ink-dark));
+      --ink-soft: light-dark(var(--ink-soft-light), var(--ink-soft-dark));
+      --line: light-dark(var(--line-light), var(--line-dark));
+      --line-strong: light-dark(var(--line-strong-light), var(--line-strong-dark));
+      --header-bg: light-dark(var(--header-light), var(--header-dark));
+      --brand-ink: light-dark(var(--brand-ink-light), var(--brand-ink-dark));
+      --eyebrow-ink: light-dark(var(--eyebrow-light), var(--eyebrow-dark));
+      --focus: light-dark(var(--focus-light), var(--focus-dark));
+      --giving-bg: light-dark(var(--giving-bg-light), var(--giving-bg-dark));
+      --giving-border: light-dark(var(--giving-border-light), var(--giving-border-dark));
+    }
+  }
+}
+
+@layer reset {
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset);
+    container-type: scroll-state;
+  }
+  body, header, nav, main, section, article, aside, footer, div, h1, h2, h3, h4, p, ul, ol, li, figure, blockquote, a, button {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  img {
+    max-inline-size: 100%;
+    display: block;
+  }
+  h1, h2, h3, h4, p, blockquote, ul, ol {
+    margin-block-start: 0;
+  }
+}
+
+@layer base {
+  body {
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.62;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-align: start;
+    overflow-wrap: break-word;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :where(a:any-link, button, [tabindex="-1"]):focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  :is(section[id], div[id], h1[id], article[id]) {
+    scroll-margin-top: var(--header-offset);
+  }
+
+  :where(h1, h2, h3, h4) {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin-block-end: 0.75rem;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.55rem);
+    color: var(--brand-ink);
+  }
+
+  h3 {
+    font-size: clamp(1.18rem, 1.08rem + 0.4vw, 1.38rem);
+    color: var(--ink);
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  button, [role="button"] {
+    min-block-size: 2.75rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .reveal {
+      animation: none;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    max-inline-size: var(--container-max);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+  }
+
+  .section {
+    padding-block: clamp(3.25rem, 6vw, 5.25rem);
+  }
+
+  .section-tight {
+    padding-block: clamp(2.25rem, 4vw, 3.5rem);
+  }
+
+  .band-alt {
+    background: var(--paper);
+    border-block: 1px solid var(--line);
+  }
+
+  .divider {
+    block-size: 1px;
+    background: var(--line);
+    border: 0;
+    margin: 0;
+  }
+
+  .skip-link {
+    position: fixed;
+    inset-block-start: 0.625rem;
+    inset-inline-start: 0.625rem;
+    z-index: 200;
+    background: var(--maroon-deep);
+    color: #fff;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--gold);
+    transform: translateY(-160%);
+    transition: transform .15s ease;
+  }
+  .skip-link:focus-visible {
+    transform: translateY(0);
+  }
+
+  .visually-hidden:where(:not(:focus-within, :active)) {
+    position: absolute !important;
+    clip-path: inset(50%) !important;
+    overflow: hidden !important;
+    inline-size: 1px !important;
+    block-size: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Top institutional notice bar — scrolls smoothly out of the way */
+  .topbar {
+    background: var(--maroon-deep);
+    color: #f6e7c8;
+    text-align: center;
+    padding-block: 0.55rem;
+    padding-inline: 1rem;
+    font-size: 0.84rem;
+    letter-spacing: 0.015em;
+    line-height: 1.4;
+    border-block-end: 1px solid rgba(197, 160, 89, .32);
+  }
+  .topbar strong {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.76rem;
+    margin-inline-end: 0.35rem;
+  }
+
+  /* Adaptive Sticky Header (single row, ResizeObserver-measured) */
+  .site-header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    border-block-end: 1px solid var(--line);
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .site-header.is-measuring * {
+    transition: none !important;
+  }
+  @container scroll-state((scrolled: bottom) and (scrollable: top)) {
+    .site-header:not(:focus-within):not(.menu-open) {
+      transform: translateY(-100%);
+    }
+  }
+  .site-header.is-hidden:not(:focus-within):not(.menu-open) {
+    transform: translateY(-100%);
+  }
+
+  .header-inner {
+    max-inline-size: var(--container-max);
+    margin-inline: auto;
+    padding-block: 0.7rem;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .header-inner > * {
+    flex-shrink: 0;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+  .brand-mark {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    background: var(--maroon);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+  }
+  .brand-text {
+    line-height: 1.08;
+  }
+  .brand-text b {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.04rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: block;
+    color: var(--brand-ink);
+  }
+  .brand-text small {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 700;
+    display: block;
+    margin-block-start: 0.15rem;
+  }
+
+  .site-nav {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid var(--line-strong);
+    background: var(--card);
+    color: var(--ink);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.9rem;
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+    anchor-name: --nav-toggle;
+  }
+  .nav-toggle:hover {
+    border-color: var(--brand-ink);
+  }
+
+  .main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    background: var(--card);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+  }
+
+  /* Narrow popover layout (default & script-synced) */
+  .site-header:not(.is-wide) .main-nav[popover] {
+    position: fixed;
+    inset: auto;
+    inset-block-start: 4.5rem;
+    inset-block-start: anchor(--nav-toggle bottom);
+    inset-inline-end: 1rem;
+    inline-size: min(84dvw, 21rem);
+    max-inline-size: calc(100dvw - 2rem);
+    max-block-size: calc(100dvh - 6rem);
+    margin-block-start: 0.45rem;
+    overflow: auto;
+  }
+  .site-header:not(.is-wide) .main-nav:not([popover]) {
+    display: none;
+    position: fixed;
+    inset-block-start: 4.5rem;
+    inset-inline-end: 1rem;
+    inline-size: min(84dvw, 21rem);
+    z-index: 150;
+  }
+  .site-header:not(.is-wide) .main-nav.is-open {
+    display: grid;
+  }
+  .site-header:not(.is-wide) .main-nav:is(:popover-open, .\:popover-open) {
+    display: grid;
+    gap: 0.125rem;
+  }
+  .site-header:not(.is-wide) .main-nav a {
+    display: block;
+    padding: 0.7rem 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.96rem;
+    border-radius: var(--radius);
+    color: var(--ink);
+  }
+  .site-header:not(.is-wide) .main-nav a:hover {
+    background: var(--paper);
+    color: var(--brand-ink);
+  }
+
+  /* Wide inline navigation layout */
+  .site-header.is-wide .nav-toggle {
+    display: none;
+  }
+  .site-header.is-wide .main-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+  .site-header.is-wide .main-nav::backdrop {
+    display: none;
+  }
+  .site-header.is-wide .main-nav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.55rem 0.68rem;
+    white-space: nowrap;
+    color: var(--ink-soft);
+    border-block-end: 2px solid transparent;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .site-header.is-wide .main-nav a:hover {
+    color: var(--brand-ink);
+    border-block-end-color: var(--gold);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 30rem) {
+    .brand-text small {
+      display: none;
+    }
+    .header-actions .btn-outline-quiet {
+      display: none;
+    }
+  }
+
+  /* Institutional Buttons (sharp architectural geometry, zero pill clutter) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    padding: 0.72rem 1.25rem;
+    border-radius: var(--radius);
+    border: 1.5px solid transparent;
+    min-block-size: 2.75rem;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    background: var(--maroon);
+    color: #fff;
+    border-color: var(--maroon);
+  }
+  .btn-primary:hover {
+    background: var(--maroon-mid);
+    border-color: var(--maroon-mid);
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: #1c1405;
+    border-color: var(--gold);
+  }
+  .btn-gold:hover {
+    background: #d3b06a;
+    border-color: #d3b06a;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--brand-ink);
+    border-color: var(--line-strong);
+  }
+  .btn-outline:hover {
+    border-color: var(--maroon);
+    background: var(--maroon);
+    color: #fff;
+  }
+  .btn-ghost-light {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, .65);
+  }
+  .btn-ghost-light:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, .12);
+  }
+  .btn-white {
+    background: #fff;
+    color: var(--maroon-deep);
+    border-color: #fff;
+  }
+  .btn-white:hover {
+    background: #f5efe3;
+  }
+  .btn-sm {
+    padding: 0.55rem 1rem;
+    font-size: 0.87rem;
+    min-block-size: 2.5rem;
+  }
+
+  /* Editorial Eyebrow with subtle architectural accent bar */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--eyebrow-ink);
+    margin-block-end: 0.75rem;
+  }
+  .eyebrow::before {
+    content: "";
+    inline-size: 1.25rem;
+    block-size: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-inline-size: 62ch;
+    margin-block-end: 1.4rem;
+  }
+
+  .prose {
+    max-inline-size: 62ch;
+    color: var(--ink-soft);
+  }
+  .prose strong {
+    color: var(--ink);
+  }
+
+  .text-link {
+    color: var(--brand-ink);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1.5px;
+  }
+  .text-link:hover {
+    text-decoration-thickness: 2.5px;
+  }
+
+  .inline-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--brand-ink);
+    text-decoration: none;
+    padding-block: 0.5rem;
+    min-block-size: 2.75rem;
+    border-block-end: 1.5px solid transparent;
+    transition: border-color .15s ease;
+  }
+  .inline-cta::after {
+    content: "→";
+    font-weight: 400;
+    transition: transform .15s ease;
+  }
+  .inline-cta:hover {
+    border-block-end-color: var(--gold);
+  }
+  .inline-cta:hover::after {
+    transform: translateX(3px);
+  }
+
+  .action-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block-start: 1.35rem;
+  }
+
+  /* HERO — Editorial McKinsey Showcase */
+  .hero {
+    position: relative;
+    background: #14080b;
+    color: #fff;
+    overflow: clip;
+    border-block-end: 3px solid var(--gold);
+  }
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    opacity: 0.36;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(16, 17, 22, .92) 0%, rgba(45, 7, 13, .82) 55%, rgba(16, 17, 22, .68) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    max-inline-size: var(--container-max);
+    margin-inline: auto;
+    padding-block: clamp(3.5rem, 7vw, 5.75rem) 0;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+  }
+  .hero-kicker {
+    font-size: 0.76rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-block-end: 1rem;
+  }
+  .hero h1 {
+    font-weight: 700;
+    line-height: 1.02;
+    font-size: clamp(2.35rem, 1.45rem + 3.4vw, 4.15rem);
+    max-inline-size: 18ch;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-block-end: 1.15rem;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold-light);
+  }
+  .hero-slogan {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.18rem, 1rem + 1vw, 1.55rem);
+    line-height: 1.4;
+    color: #fff;
+    max-inline-size: 46ch;
+    margin-block-end: 1rem;
+    border-inline-start: 2px solid var(--gold);
+    padding-inline-start: 1rem;
+  }
+  .hero-sub {
+    font-size: 1.08rem;
+    line-height: 1.62;
+    color: rgba(255, 255, 255, .90);
+    max-inline-size: 58ch;
+    margin-block-end: 1.65rem;
+  }
+  .hero-sub strong {
+    color: #fff;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block-end: 3rem;
+  }
+
+  .hero-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-block-start: 1px solid rgba(255, 255, 255, .2);
+  }
+  @media (max-width: 48rem) {
+    .hero-strip {
+      grid-template-columns: 1fr;
+    }
+  }
+  .hero-stat {
+    padding-block: 1.1rem;
+    padding-inline-end: 1.25rem;
+  }
+  .hero-stat:not(:first-child) {
+    border-inline-start: 1px solid rgba(255, 255, 255, .18);
+    padding-inline-start: 1.25rem;
+  }
+  @media (max-width: 48rem) {
+    .hero-stat:not(:first-child) {
+      border-inline-start: 0;
+      padding-inline-start: 0;
+      border-block-start: 1px solid rgba(255, 255, 255, .16);
+    }
+  }
+  .hero-stat strong {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold-light);
+    margin-block-end: 0.2rem;
+  }
+  .hero-stat span {
+    font-size: 0.94rem;
+    color: rgba(255, 255, 255, .88);
+  }
+
+  /* Layouts & Editorial Cards */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1.06fr 0.94fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+  }
+  @media (max-width: 54rem) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.65rem;
+  }
+  .card p {
+    margin-block-end: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .card p:last-child {
+    margin-block-end: 0;
+  }
+  .card-accent {
+    border-block-start: 3px solid var(--maroon);
+  }
+  .card-gold {
+    border-block-start: 3px solid var(--gold);
+  }
+
+  .focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    border-block-start: 1px solid var(--line);
+  }
+  .focus-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding-block: 0.7rem;
+    border-block-end: 1px solid var(--line);
+    font-size: 0.96rem;
+    color: var(--ink);
+  }
+  .focus-list li::before {
+    content: "";
+    inline-size: 0.4rem;
+    block-size: 0.4rem;
+    background: var(--gold);
+    margin-block-start: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .mission-promise {
+    margin-block-start: 1.15rem;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+  }
+  .mission-promise strong {
+    color: var(--ink);
+  }
+
+  /* Leadership Dossiers */
+  .profile-stack {
+    display: grid;
+    gap: 3rem;
+    margin-block-start: 1.5rem;
+  }
+  .profile-block + .profile-block {
+    padding-block-start: 2.75rem;
+    border-block-start: 1px solid var(--line);
+  }
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(1.5rem, 3.5vw, 2.5rem);
+    align-items: start;
+  }
+  @media (max-width: 56rem) {
+    .profile-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .profile-card {
+    background: var(--maroon-deep);
+    color: #fff;
+    border-radius: var(--radius);
+    border-block-start: 3px solid var(--gold);
+    padding: 1.85rem;
+  }
+  .profile-avatar {
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
+    border-radius: var(--radius);
+    background: var(--gold);
+    color: #1c1405;
+    display: grid;
+    place-items: center;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-block-end: 1.1rem;
+  }
+  .profile-card h3 {
+    font-size: 1.65rem;
+    color: #fff;
+    margin-block-end: 0.4rem;
+  }
+  .profile-role {
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-block-end: 0.65rem;
+  }
+  .profile-headline {
+    color: rgba(255, 255, 255, .94);
+    font-weight: 600;
+    font-size: 0.96rem;
+    margin-block-end: 0.45rem;
+  }
+  .profile-loc {
+    color: rgba(255, 255, 255, .78);
+    font-size: 0.9rem;
+    margin-block-end: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .profile-loc::before {
+    content: "";
+    inline-size: 0.38rem;
+    block-size: 0.38rem;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .profile-card p.bio {
+    color: rgba(255, 255, 255, .90);
+    margin-block-end: 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.62;
+  }
+  .profile-duty {
+    color: #fff;
+    margin-block-end: 1.25rem;
+    font-size: 0.94rem;
+    line-height: 1.55;
+    border-inline-start: 2px solid var(--gold);
+    padding-inline-start: 0.85rem;
+    background: rgba(255, 255, 255, .05);
+    padding-block: 0.6rem;
+    padding-inline-end: 0.65rem;
+  }
+  .profile-stat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-block-start: 1px solid rgba(255, 255, 255, .2);
+    border-block-end: 1px solid rgba(255, 255, 255, .2);
+    margin-block-start: 1.1rem;
+  }
+  @media (max-width: 28rem) {
+    .profile-stat {
+      grid-template-columns: 1fr;
+    }
+  }
+  .profile-stat div {
+    padding-block: 0.9rem;
+    padding-inline-end: 0.85rem;
+  }
+  .profile-stat div + div {
+    border-inline-start: 1px solid rgba(255, 255, 255, .2);
+    padding-inline-start: 0.85rem;
+  }
+  .profile-stat strong {
+    display: block;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.4rem;
+    line-height: 1.05;
+    color: var(--gold-light);
+  }
+  .profile-stat span {
+    display: block;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, .84);
+    margin-block-start: 0.3rem;
+    line-height: 1.35;
+  }
+
+  .profile-side {
+    display: grid;
+    gap: 1rem;
+  }
+  .cap-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: balance;
+    gap: 0.45rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .cap-grid li {
+    background: var(--inset);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.42rem 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .exp-heading {
+    font-size: 1.18rem;
+    margin: 0.75rem 0 0;
+  }
+  .exp-list {
+    border-block-start: 1px solid var(--line-strong);
+    margin-block-start: 0.5rem;
+  }
+  .exp-item {
+    padding-block: 1.15rem;
+    border-block-end: 1px solid var(--line);
+  }
+  .exp-item header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-block-end: 0.5rem;
+  }
+  .exp-item h4 {
+    font-size: 1.06rem;
+    margin: 0;
+    color: var(--ink);
+  }
+  .exp-item h4 span {
+    color: var(--eyebrow-ink);
+    font-weight: 600;
+  }
+  .exp-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--eyebrow-ink);
+    white-space: nowrap;
+  }
+  .exp-item ul {
+    margin: 0;
+    padding-inline-start: 1.15rem;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .exp-item li {
+    margin-block-end: 0.25rem;
+  }
+  .exp-note {
+    margin: 0.75rem 0 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .cred-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-block-start: 1.5rem;
+  }
+  @media (max-width: 42rem) {
+    .cred-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .cred-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+  }
+  .cred-card ul {
+    margin: 0;
+    padding-inline-start: 1.15rem;
+    color: var(--ink-soft);
+  }
+  .cred-card li {
+    margin-block-end: 0.35rem;
+  }
+  .cred-card p {
+    margin: 0 0 0.55rem;
+    color: var(--ink-soft);
+  }
+  .cred-card strong {
+    color: var(--ink);
+  }
+
+  /* 3-Step Matrix (#get-help) */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line);
+    background: var(--card);
+    margin-block-start: 1.5rem;
+  }
+  @media (max-width: 54rem) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  .step {
+    padding: 1.75rem;
+  }
+  .step + .step {
+    border-inline-start: 1px solid var(--line);
+  }
+  @media (max-width: 54rem) {
+    .step + .step {
+      border-inline-start: 0;
+      border-block-start: 1px solid var(--line);
+    }
+  }
+  .step-num {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--eyebrow-ink);
+    margin-block-end: 0.9rem;
+  }
+  .step p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+  }
+
+  .note-box {
+    background: var(--inset);
+    border-inline-start: 3px solid var(--maroon);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    margin-block-start: 1.25rem;
+  }
+  .note-box strong {
+    color: var(--ink);
+  }
+
+  /* 13-Service Executive Grid with Subgrid Track Alignment */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 1.15rem;
+    margin-block-start: 1rem;
+  }
+  .svc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-block-start: 3px solid var(--line-strong);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.65rem;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .svc:hover {
+    border-block-start-color: var(--maroon);
+    transform: translateY(-2px);
+  }
+  .svc-lead {
+    grid-column: 1 / -1;
+    border-block-start-color: var(--gold);
+    background: linear-gradient(135deg, var(--card) 0%, var(--paper) 100%);
+  }
+  .svc-lead:hover {
+    border-block-start-color: var(--gold);
+  }
+  @media (min-width: 54rem) {
+    .svc-lead {
+      grid-template-columns: minmax(14rem, 1fr) 1.5fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      column-gap: clamp(1.25rem, 3vw, 2.5rem);
+      row-gap: 0.55rem;
+    }
+    .svc-lead .svc-head {
+      grid-column: 1 / -1;
+    }
+    .svc-lead h3 {
+      grid-column: 1;
+    }
+    .svc-lead p {
+      grid-column: 2;
+      margin: 0;
+    }
+    .svc-lead .inline-cta {
+      grid-column: 3;
+      justify-self: end;
+    }
+  }
+  @supports (grid-template-rows: subgrid) {
+    .svc:not(.svc-lead) {
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+      gap: 0.55rem;
+    }
+  }
+  .svc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--eyebrow-ink);
+    padding-block-end: 0.45rem;
+    border-block-end: 1px solid var(--line);
+  }
+  .svc-mark {
+    color: var(--brand-ink);
+    font-size: 1rem;
+  }
+  .svc h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+  .svc p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* Program Split Feature Modules */
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: clip;
+    background: var(--card);
+  }
+  @media (max-width: 54rem) {
+    .feature {
+      grid-template-columns: 1fr;
+    }
+  }
+  .feature-highlight {
+    border-block-start: 3px solid var(--gold);
+  }
+  .feature-media {
+    margin: 0;
+    background: var(--inset);
+  }
+  .feature-media img {
+    inline-size: 100%;
+    block-size: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .feature-body {
+    padding: clamp(1.5rem, 3vw, 2.35rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feature-body h3 {
+    font-size: clamp(1.35rem, 1.15rem + 0.8vw, 1.72rem);
+    margin-block-end: 0.85rem;
+  }
+  .feature-body p {
+    color: var(--ink-soft);
+    margin-block-end: 0.9rem;
+  }
+  .feature-body ul {
+    margin: 0 0 1.25rem;
+    padding-inline-start: 1.15rem;
+    color: var(--ink-soft);
+  }
+  .feature-body li {
+    margin-block-end: 0.35rem;
+  }
+  .feature-note {
+    font-size: 0.92rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--inset);
+    border-inline-start: 2px solid var(--gold);
+    margin-block-end: 1.25rem;
+  }
+  .feature-note strong {
+    color: var(--ink);
+  }
+
+  .health-bullets {
+    margin: 0 0 1.25rem;
+    padding-inline-start: 1.15rem;
+    color: var(--ink-soft);
+  }
+  .health-bullets li {
+    margin-block-end: 0.45rem;
+  }
+  .card-media {
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-block-start: 0.5rem;
+  }
+  .media-caption {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-block-start: 0.65rem;
+    margin-block-end: 0;
+  }
+
+  .meals-stack {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  /* Academy & Outcomes Impact Band */
+  .academy-tracks {
+    border-block-start: 1px solid var(--line-strong);
+  }
+  .track-row {
+    padding-block: 1.15rem;
+    border-block-end: 1px solid var(--line);
+    display: grid;
+    gap: 0.4rem;
+  }
+  .track-row h3 {
+    margin: 0;
+    font-size: 1.14rem;
+  }
+  .track-row p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .outcomes {
+    background: var(--maroon-deep);
+    color: #fff;
+    border-radius: var(--radius);
+    border-block-start: 3px solid var(--gold);
+    padding: clamp(1.75rem, 3.5vw, 2.5rem);
+    margin-block-start: 2.5rem;
+  }
+  .outcomes h2 {
+    color: #fff;
+  }
+  .outcomes .eyebrow {
+    color: var(--gold-light);
+  }
+  .outcomes > p {
+    color: rgba(255, 255, 255, .88);
+    max-inline-size: 62ch;
+  }
+  .outcome-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-block: 1px solid rgba(255, 255, 255, .2);
+    margin-block-start: 1.5rem;
+  }
+  @media (max-width: 64rem) {
+    .outcome-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 34rem) {
+    .outcome-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .outcome {
+    padding: 1rem 0.9rem;
+    font-weight: 700;
+    font-size: 0.94rem;
+    line-height: 1.3;
+    border-inline-end: 1px solid rgba(255, 255, 255, .15);
+    border-block-end: 1px solid rgba(255, 255, 255, .12);
+  }
+  .outcome span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.84rem;
+    color: rgba(255, 255, 255, .82);
+    margin-block-start: 0.3rem;
+  }
+
+  /* Partner & Volunteer */
+  .partner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  @media (max-width: 48rem) {
+    .partner-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .partner-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-block-start: 3px solid var(--maroon);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .partner-card h3 {
+    font-size: 1.35rem;
+  }
+  .partner-card p {
+    color: var(--ink-soft);
+    margin-block-end: 1rem;
+  }
+  .partner-card ul {
+    margin: 0 0 1.25rem;
+    padding-inline-start: 1.15rem;
+    color: var(--ink-soft);
+    flex: 1;
+  }
+  .partner-card .small-note {
+    font-size: 0.88rem;
+    margin-block: 1rem 0;
+  }
+
+  /* Affiliated & Ecosystem Initiatives (#family) */
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-block-start: 1.25rem;
+  }
+  @media (max-width: 54rem) {
+    .family-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .family-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .family-card.is-here {
+    border: 1px solid var(--maroon);
+    border-block-start: 4px solid var(--maroon);
+  }
+  .family-card p {
+    color: var(--ink-soft);
+    margin-block-end: 1rem;
+    flex: 1;
+  }
+
+  .gov-note {
+    margin-block-start: 1.25rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--maroon);
+    border-radius: var(--radius);
+    padding: 1.15rem 1.35rem;
+  }
+  .gov-note p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+  .gov-note strong {
+    color: var(--ink);
+  }
+
+  /* Giving Status & Closing Band */
+  .giving {
+    background: var(--giving-bg);
+    border: 1px solid var(--giving-border);
+    border-inline-start: 4px solid var(--maroon);
+    border-radius: var(--radius);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .status-badge {
+    display: inline-block;
+    background: var(--maroon);
+    color: #fff;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-block-end: 0.9rem;
+  }
+
+  .cta-band {
+    background: #101218;
+    color: #fff;
+    border-radius: var(--radius);
+    border-block-start: 3px solid var(--gold);
+    padding: clamp(2.25rem, 4.5vw, 3.25rem) 1.5rem;
+    text-align: center;
+  }
+  .cta-band .eyebrow {
+    color: var(--gold-light);
+    justify-content: center;
+  }
+  .cta-band h2 {
+    color: #fff;
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.4rem);
+    max-inline-size: 28ch;
+    margin-inline: auto;
+  }
+  .cta-band p {
+    color: rgba(255, 255, 255, .86);
+    max-inline-size: 56ch;
+    margin: 0 auto 1.5rem;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Institutional Footer */
+  footer {
+    background: var(--paper);
+    border-block-start: 1px solid var(--line);
+    padding-block: 3rem 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+  @media (max-width: 48rem) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-block-end: 0.9rem;
+  }
+  .footer-brand .brand-mark {
+    inline-size: 2.25rem;
+    block-size: 2.25rem;
+    font-size: 1.05rem;
+  }
+  .footer-brand strong {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.08rem;
+    color: var(--brand-ink);
+  }
+  .footer-lead {
+    margin-block-end: 0.65rem;
+    max-inline-size: 46ch;
+  }
+  .footer-col-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--eyebrow-ink);
+    margin-block-end: 0.85rem;
+  }
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 1.25rem;
+  }
+  @media (max-width: 30rem) {
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+  }
+  footer p, footer li {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+  footer a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-links a {
+    display: inline-block;
+    padding-block: 0.25rem;
+    min-block-size: 1.5rem;
+  }
+  footer a:hover {
+    text-decoration: underline;
+    color: var(--brand-ink);
+  }
+  .footer-meta {
+    margin-block-start: 2rem;
+    padding-block-start: 1.25rem;
+    border-block-start: 1px solid var(--line);
+    display: grid;
+    gap: 0.45rem;
+  }
+  .small {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .reveal {
+    animation: fadeUp .45s ease both;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    .btn, .card, .svc, .feature, .partner-card, .family-card, .giving, .cta-band, .profile-card, .outcomes, .step, .brand-mark {
+      border: 1px solid CanvasText;
+    }
+    :where(a:any-link, button, [tabindex="-1"]):focus-visible {
+      outline: 3px solid Highlight;
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="topbar"><strong>In formation</strong> Shafanna Solutions is a proposed nonprofit in Detroit, Michigan — not yet incorporated and not yet a 501(c)(3). This site presents the planned model.</div>
+
+<header class="site-header is-wide" id="siteHeader">
+  <div class="header-inner" id="headerInner">
+    <a class="brand" href="#top" aria-label="Shafanna Solutions home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span class="brand-text"><b>Shafanna Solutions</b><small>Detroit &bull; Michigan</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <button type="button" class="nav-toggle" id="navToggle" popovertarget="primaryNav" popovertargetaction="toggle" aria-expanded="false" aria-controls="primaryNav">
+        <span aria-hidden="true">&#9776;</span>
+        <span>Menu</span>
+      </button>
+      <ul id="primaryNav" class="main-nav">
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#team">Leadership &amp; Team</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#academy">Shafanna Academy</a></li>
+        <li><a href="#partner">Volunteer &amp; Partner</a></li>
+        <li><a href="#family">Ecosystem</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+      <a class="btn btn-outline btn-sm btn-outline-quiet" href="#giving">Donate</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img" src="assets/hero-detroit.webp" alt="Detroit skyline across the Detroit River on a clear day" width="990" height="556" fetchpriority="high" decoding="async">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner reveal">
+      <p class="hero-kicker">Detroit &bull; Community &bull; Opportunity</p>
+      <h1 id="main-content" tabindex="-1">Your past is a chapter. <br><em>Not your entire story.</em></h1>
+      <p class="hero-slogan">“It’s not how you start. It’s how you finish.”</p>
+      <p class="hero-sub"><strong>Housing. Employment. Recovery. Education. Food.</strong> A community committed to helping you move forward — through one entry point, coordinated wraparound services, and a clear pathway forward.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#get-help">Get Help</a>
+        <a class="btn btn-ghost-light" href="#partner">Partner With Us</a>
+        <a class="btn btn-white" href="#mission">Our Mission</a>
+      </div>
+      <div class="hero-strip">
+        <div class="hero-stat">
+          <strong>Organizational Status</strong>
+          <span>Proposed Black-founded nonprofit (in formation)</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Geographic Focus</strong>
+          <span>Rooted in Detroit, Michigan</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Launch Stage</strong>
+          <span>In formation — programs in development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section" id="mission">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Our Mission</p>
+          <h2>A person’s past should not permanently determine their future.</h2>
+          <p class="lead">Shafanna Solutions is a proposed Detroit-based, Black-founded nonprofit dedicated to helping individuals and families overcome barriers to stability, employment, health, housing, education, and long-term economic independence.</p>
+          <p class="prose">Through coordinated wraparound services, workforce development, housing assistance, healthcare navigation, recovery support, food security, education, and community partnerships, Shafanna Solutions seeks to create practical pathways from hardship to self-sufficiency.</p>
+          <p class="prose">Rooted in Detroit and committed to equitable access, Shafanna Solutions seeks to build a community in which every person has the opportunity, resources, and support to finish stronger than they started.</p>
+          <div class="action-row">
+            <a class="btn btn-primary" href="#get-help">Get Help</a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="card card-gold">
+          <h3>Who we are focused on serving</h3>
+          <p>Our commitment is especially focused on people facing significant barriers — not as categories, but as neighbors rebuilding on their own terms.</p>
+          <ul class="focus-list">
+            <li>Returning citizens coming home and rebuilding</li>
+            <li>People experiencing homelessness or housing instability</li>
+            <li>Individuals affected by substance use disorders</li>
+            <li>Unemployed and underemployed adults</li>
+            <li>Families navigating economic instability</li>
+            <li>Entrepreneurs and aspiring small business owners</li>
+            <li>First-time homebuyers preparing to purchase a home</li>
+          </ul>
+          <p class="mission-promise"><strong>One-door promise:</strong> Someone seeking employment can also receive help with housing, transportation, treatment referrals, food, clothing, and training — without restarting the process with every department.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & TEAM -->
+  <section class="section band-alt" id="team">
+    <div class="wrap">
+      <p class="eyebrow">Leadership &amp; Team</p>
+      <h2>Leadership rooted in the mission.</h2>
+      <p class="lead">Meet the founder leading Shafanna Solutions, the operations leader whose career in workforce development connects directly to the work Shafanna Solutions will coordinate through <a class="text-link" href="#jobs">Jobs &amp; Training</a> and Employment, and the organization&rsquo;s attorney.</p>
+
+      <div class="profile-stack">
+        <!-- Founder & CEO -->
+        <div class="profile-block" id="founder">
+          <div class="profile-grid">
+            <div class="profile-card">
+              <div class="profile-avatar" aria-hidden="true">EW</div>
+              <h3>Emmanuel Washington</h3>
+              <p class="profile-role">Founder &amp; CEO</p>
+              <p class="profile-loc">Detroit, MI</p>
+              <p class="bio">Founder of Shafanna Solutions, Emmanuel Washington leads the organization behind its one-door mission — bringing workforce, housing, and coordinated support together through a single entry point, so people do not have to restart the process with every department.</p>
+              <div class="action-row">
+                <a class="btn btn-gold btn-sm" href="#mission">Our Mission</a>
+                <a class="btn btn-ghost-light btn-sm" href="#get-help">Get Help</a>
+              </div>
+            </div>
+
+            <div class="profile-side">
+              <div class="card card-accent">
+                <h3>Leading the one-door mission</h3>
+                <p>As Founder &amp; CEO, Emmanuel Washington leads Shafanna Solutions as it forms in Detroit — setting its direction around one entry point, coordinated wraparound services, and a clear pathway forward.</p>
+                <ul class="cap-grid">
+                  <li>Workforce Development</li>
+                  <li>Housing &amp; Reentry</li>
+                  <li>Benefits Navigation</li>
+                  <li>Recovery Support</li>
+                  <li>Food &amp; Clothing Assistance</li>
+                  <li>Wraparound Services</li>
+                  <li>Shafanna Academy Education</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>One door, coordinated services</h3>
+                <p>Under his leadership, Shafanna Solutions is being built so someone seeking employment can also receive help with housing, transportation, treatment referrals, food, clothing, and training — without starting over at every step.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations & Workforce Programs -->
+        <div class="profile-block">
+          <div class="profile-grid">
+            <div class="profile-card">
+              <div class="profile-avatar" aria-hidden="true">TD</div>
+              <h3>Tyrone Davidson</h3>
+              <p class="profile-role">Second in Command under the CEO — Operations &amp; Workforce Programs</p>
+              <p class="profile-headline">Operations Management &bull; Workforce Development &bull; Logistics &amp; Quality Assurance</p>
+              <p class="profile-loc">Detroit, MI</p>
+              <p class="bio">Operations and workforce development professional with 15+ years of experience spanning employment services, site management, production, warehouse logistics, and quality inspection. Helped place 1,500+ eligible job seekers into employment over nearly a decade in workforce development. Brings hands-on supervisory experience, disciplined documentation, and a safety-focused approach to daily operations.</p>
+              <p class="profile-duty">His remit is operations and the people Shafanna Solutions serves. All Shafanna Solutions funds are handled separately by its attorney, Timothy Wiggins, Esq. — Tyrone does not handle organizational funds.</p>
+              <div class="profile-stat">
+                <div><strong>15+ years</strong><span>Experience across employment services, site management, production, warehouse logistics &amp; quality inspection</span></div>
+                <div><strong>1,500+</strong><span>Eligible job seekers helped into employment</span></div>
+              </div>
+              <div class="action-row">
+                <a class="btn btn-gold btn-sm" href="#jobs">Jobs &amp; Training</a>
+                <a class="btn btn-ghost-light btn-sm" href="#get-help">Get Help</a>
+              </div>
+            </div>
+
+            <div class="profile-side">
+              <div class="card card-accent">
+                <h3>Selected Capabilities</h3>
+                <ul class="cap-grid">
+                  <li>Team Supervision &amp; Scheduling</li>
+                  <li>Workforce Placement &amp; Career Coaching</li>
+                  <li>Daily Site Operations</li>
+                  <li>Quality Inspection &amp; Documentation</li>
+                  <li>Warehouse &amp; Material Handling</li>
+                  <li>Safety Procedures</li>
+                  <li>Equipment Coordination</li>
+                  <li>Performance Reporting</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="exp-heading">Professional Experience</h3>
+                <div class="exp-list">
+                  <article class="exp-item">
+                    <header>
+                      <h4>Car Wash Manager <span>| Snap Clean Car Wash</span></h4>
+                      <span class="exp-date">Jan 2024 – Dec 2025</span>
+                    </header>
+                    <ul>
+                      <li>Managed daily site operations, including employee scheduling, customer service, safety practices, and equipment readiness.</li>
+                      <li>Supervised frontline employees and reinforced consistent service and operational standards.</li>
+                      <li>Oversaw cash-handling procedures, routine reporting, and maintenance coordination.</li>
+                    </ul>
+                  </article>
+
+                  <article class="exp-item">
+                    <header>
+                      <h4>Production Worker <span>| GW Group</span></h4>
+                      <span class="exp-date">Nov 2022 – Jul 2023</span>
+                    </header>
+                    <ul>
+                      <li>Operated production equipment while following established safety and operating procedures.</li>
+                      <li>Supported loading, unloading, material movement, and warehouse-related activities.</li>
+                      <li>Monitored production output for quality and supported efficient daily workflows.</li>
+                    </ul>
+                  </article>
+
+                  <article class="exp-item">
+                    <header>
+                      <h4>Quality Control Inspector <span>| Bay Logistics</span></h4>
+                      <span class="exp-date">Feb 2019 – May 2022</span>
+                    </header>
+                    <ul>
+                      <li>Inspected incoming materials and finished products against established quality standards.</li>
+                      <li>Documented inspection results and reported nonconforming items and process discrepancies.</li>
+                      <li>Coordinated with warehouse personnel on quality findings and operating requirements.</li>
+                    </ul>
+                  </article>
+
+                  <article class="exp-item">
+                    <header>
+                      <h4>Workforce Development Specialist <span>| Michigan Works Resource Network</span></h4>
+                      <span class="exp-date">Apr 2009 – Feb 2019</span>
+                    </header>
+                    <ul>
+                      <li>Helped place more than 1,500 eligible clients into employment opportunities.</li>
+                      <li>Delivered individual career coaching, job-readiness training, and employment-resource guidance.</li>
+                      <li>Maintained participant records, placement documentation, and performance reports.</li>
+                    </ul>
+                    <p class="exp-note">This workforce development experience connects directly to Shafanna Solutions&rsquo; <a class="text-link" href="#jobs">Employment and Jobs &amp; Training</a> work — job placement, career coaching, and support for retention and advancement.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cred-grid">
+            <div class="cred-card">
+              <h3>Credentials</h3>
+              <ul>
+                <li>Class A Commercial Driver&rsquo;s License (CDL)</li>
+                <li>DOT Medical Card</li>
+                <li>Forklift Operator Certification</li>
+              </ul>
+            </div>
+            <div class="cred-card">
+              <h3>Education</h3>
+              <p><strong>Henry Ford Community College</strong> — Two years of college coursework</p>
+              <p><strong>Southfield-Lathrup High School, Southfield, MI</strong> — High School Diploma, 2001</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attorney & Money Handler -->
+        <div class="profile-block" id="attorney">
+          <div class="profile-grid">
+            <div class="profile-card">
+              <div class="profile-avatar" aria-hidden="true">TW</div>
+              <h3>Timothy Wiggins, Esq.</h3>
+              <p class="profile-role">Attorney &amp; Money Handler</p>
+              <p class="profile-headline">Founder &amp; Principal Advisor, Wiggins Advisory Group</p>
+              <p class="profile-loc">Detroit, MI</p>
+              <p class="bio">Detroit attorney serving as Shafanna Solutions&rsquo; attorney. As Founder &amp; Principal Advisor of Wiggins Advisory Group, his work covers executive advisory and outside general counsel, governance and leadership, enterprise risk and compliance, and organizational growth — including experience in nonprofit governance.</p>
+              <p class="profile-duty">Timothy handles all Shafanna Solutions money. He is not the organization&rsquo;s accountant — accounting and bookkeeping are a separate function, handled separately.</p>
+              <div class="action-row">
+                <a class="btn btn-gold btn-sm" href="#mission">Our Mission</a>
+                <a class="btn btn-ghost-light btn-sm" href="#partner">Volunteer &amp; Partner</a>
+              </div>
+            </div>
+
+            <div class="profile-side">
+              <div class="card card-accent">
+                <h3>Advisory Areas</h3>
+                <ul class="cap-grid">
+                  <li>Executive Advisory / Outside General Counsel</li>
+                  <li>Governance &amp; Leadership</li>
+                  <li>Enterprise Risk &amp; Compliance</li>
+                  <li>Organizational Growth</li>
+                  <li>Nonprofit Governance</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Attorney &amp; money handler — not the accountant</h3>
+                <p>Timothy Wiggins, Esq. serves as Shafanna Solutions&rsquo; attorney and handles all organizational money. That role is distinct from accounting: he is not the organization&rsquo;s accountant, and accounting and bookkeeping are a separate function.</p>
+                <p>Shafanna Solutions is in formation — not yet incorporated and not yet a 501(c)(3) — and donations are not being accepted at this time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET HELP / ONE DOOR -->
+  <section class="section" id="get-help">
+    <div class="wrap">
+      <p class="eyebrow">Get Help</p>
+      <h2>One entry point. One plan. One team walking with you.</h2>
+      <p class="lead">This is how the Shafanna Solutions model will work when programs launch. There is no intake form on this public site and no personal information is collected here — this section describes the process so you know what to expect.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Community Intake &amp; Navigation</h3>
+          <p>We start by listening and assessing needs together — housing, work, health, food, family, and legal referrals — in a single conversation, not five separate applications.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Your navigator &amp; support plan</h3>
+          <p>You are assigned a navigator who helps build an individualized support plan, coordinates services, and stays as your single point of contact as steps change.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>A pathway forward</h3>
+          <p>Services are coordinated around your plan — so progress in one area (for example, training) is supported in the others (housing, food, clothing, and health access).</p>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <strong>Status note:</strong> Shafanna Solutions is currently in formation. Intake, appointments, and referrals will open through a separate, secure system once formation and partnerships are complete. This public site does not collect health, housing, or other sensitive information.
+      </div>
+
+      <div class="action-row">
+        <a class="btn btn-primary" href="#services">See All Services</a>
+        <a class="btn btn-outline" href="#partner">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="section band-alt" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What Shafanna Solutions will coordinate</p>
+      <h2>Wraparound services, under one roof in spirit</h2>
+      <p class="lead">Thirteen connected areas. You don’t have to fit into one box to get help — your navigator connects the pieces that matter for your plan.</p>
+
+      <div class="services-grid">
+        <article class="svc svc-lead">
+          <div class="svc-head"><span>SERVICE 01 &bull; ONE-DOOR ENTRY POINT</span><span class="svc-mark" aria-hidden="true">◎</span></div>
+          <h3>Community Intake &amp; Navigation</h3>
+          <p>Assess needs, assign a navigator, and develop an individualized support plan that coordinates everything else.</p>
+          <a class="inline-cta" href="#get-help">Get Help <span class="visually-hidden">with Community Intake &amp; Navigation</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 02</span><span class="svc-mark" aria-hidden="true">⌂</span></div>
+          <h3>Housing &amp; Reentry</h3>
+          <p>Emergency, transitional, and supportive housing assistance and navigation — including support for people returning home.</p>
+          <a class="inline-cta" href="#housing">Explore Housing <span class="visually-hidden">&amp; Reentry Support</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 03</span><span class="svc-mark" aria-hidden="true">✚</span></div>
+          <h3>Health &amp; Recovery</h3>
+          <p>Medicaid and benefits navigation, plus behavioral-health and treatment referrals to licensed providers. Navigation and referrals — not clinical care.</p>
+          <a class="inline-cta" href="#health">Explore Health <span class="visually-hidden">&amp; Recovery Navigation</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 04</span><span class="svc-mark" aria-hidden="true">⬢</span></div>
+          <h3>Employment</h3>
+          <p>Job placement, employer partnerships, and career coaching focused on retention and advancement, not just a first placement.</p>
+          <a class="inline-cta" href="#jobs">Explore Jobs <span class="visually-hidden">&amp; Training</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 05</span><span class="svc-mark" aria-hidden="true">✎</span></div>
+          <h3>Shafanna Academy</h3>
+          <p>GED pathways, workforce certifications, and original classes that build credentials alongside real-world support.</p>
+          <a class="inline-cta" href="#academy">Explore Shafanna Academy</a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 06</span><span class="svc-mark" aria-hidden="true">◐</span></div>
+          <h3>Food &amp; Nutrition</h3>
+          <p>Meals, pantry assistance, and a community kitchen — food support connected to your broader stability plan.</p>
+          <a class="inline-cta" href="#meals">Explore Meals <span class="visually-hidden">&amp; Food Support</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 07</span><span class="svc-mark" aria-hidden="true">◇</span></div>
+          <h3>Clothing &amp; Essentials</h3>
+          <p>Work clothing, hygiene kits, and household necessities — the practical items that make starting a job or a home possible.</p>
+          <a class="inline-cta" href="#meals">Explore Essentials <span class="visually-hidden">&amp; Clothing Support</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 08</span><span class="svc-mark" aria-hidden="true">♥</span></div>
+          <h3>Family Support</h3>
+          <p>Benefits assistance, childcare referrals, and family stabilization support so progress holds for the whole household.</p>
+          <a class="inline-cta" href="#meals">Explore Family Support</a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 09</span><span class="svc-mark" aria-hidden="true">§</span></div>
+          <h3>Justice &amp; Advocacy</h3>
+          <p>Reentry navigation and record-related legal referrals — help understanding next steps and connecting to qualified legal support (affiliated platform <a class="text-link" href="https://lihi.maroon-technologies.org/" target="_blank" rel="noopener">LIHI</a> highlighted under Affiliated &amp; Ecosystem Initiatives).</p>
+          <a class="inline-cta" href="#reentry">Explore Justice <span class="visually-hidden">&amp; Reentry Advocacy</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 10</span><span class="svc-mark" aria-hidden="true">↗</span></div>
+          <h3>Reentry Services</h3>
+          <p>Dedicated support for returning citizens — ID and documents, housing and employment pathways, benefits, and a navigator from day one.</p>
+          <a class="inline-cta" href="#reentry">Explore Reentry <span class="visually-hidden">Services</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 11</span><span class="svc-mark" aria-hidden="true">⬣</span></div>
+          <h3>Entrepreneurship &amp; Small Business</h3>
+          <p>Business Classes, startup and business-planning coaching, and help preparing to work with lenders and small-business programs — hosted through Shafanna Academy.</p>
+          <a class="inline-cta" href="#entrepreneurship">Explore Business <span class="visually-hidden">Classes</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 12</span><span class="svc-mark" aria-hidden="true">⌂</span></div>
+          <h3>Homebuyer Education</h3>
+          <p>Home buyer classes covering readiness, budgeting and credit preparation, mortgages, and navigation to down-payment assistance programs.</p>
+          <a class="inline-cta" href="#homebuyer">Explore Homebuyer <span class="visually-hidden">Classes</span></a>
+        </article>
+        <article class="svc">
+          <div class="svc-head"><span>SERVICE 13</span><span class="svc-mark" aria-hidden="true">↦</span></div>
+          <h3>Transportation &amp; Rides</h3>
+          <p>Transportation navigation and ride coordination so lack of a car does not block job interviews, health appointments, classes, or housing steps.</p>
+          <a class="inline-cta" href="#get-help">Get Help <span class="visually-hidden">with Transportation Navigation</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOUSING -->
+  <section class="section-tight" id="housing">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media">
+          <img src="assets/neighborhood-detroit.webp" srcset="assets/neighborhood-detroit-800w.webp 800w, assets/neighborhood-detroit.webp 1400w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Residential street with homes in a Detroit neighborhood" width="1400" height="931" loading="lazy" decoding="async">
+        </div>
+        <div class="feature-body">
+          <p class="eyebrow">Housing &amp; Reentry</p>
+          <h3>A stable place to land is the foundation for everything else.</h3>
+          <p>Shafanna Solutions will help people navigate emergency, transitional, and supportive housing options, and will walk alongside returning citizens as they re-establish housing, identification, benefits, and community connections.</p>
+          <ul>
+            <li>Housing navigation and placement support</li>
+            <li>Reentry navigation from day one</li>
+            <li>Coordination with employment, recovery, and family support</li>
+            <li>Record-related legal referrals through Justice &amp; Advocacy</li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#services">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REENTRY — STANDALONE -->
+  <section class="section-tight" id="reentry">
+    <div class="wrap">
+      <div class="feature feature-highlight">
+        <div class="feature-body">
+          <p class="eyebrow">Reentry Services</p>
+          <h3>Coming home deserves a plan — and a person in your corner from day one.</h3>
+          <p>Reentry is its own dedicated service at Shafanna Solutions, not an afterthought. Returning citizens will be paired with a navigator from day one who helps coordinate the practical steps of rebuilding — so housing, work, benefits, and family support move together, not in isolation.</p>
+          <ul>
+            <li><strong>ID and documents navigation</strong> — help obtaining identification, vital records, and the paperwork needed for housing, work, and benefits</li>
+            <li><strong>Housing pathways</strong> — emergency, transitional, and supportive housing navigation for returning citizens</li>
+            <li><strong>Employment pathways</strong> — job placement, career coaching, work clothing, and employer partnerships that welcome returning citizens</li>
+            <li><strong>Benefits enrollment</strong> — Medicaid and benefits navigation, food assistance, and recovery support connections</li>
+            <li><strong>Record-related legal referrals</strong> — connection to qualified legal support through Justice &amp; Advocacy</li>
+            <li><strong>A navigator from day one</strong> — one point of contact who knows your plan and walks with you as it changes</li>
+          </ul>
+          <p class="feature-note">Reentry support connects directly to Housing &amp; Reentry, Employment, Health &amp; Recovery, and Family Support — because coming home touches all of them at once.</p>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="feature-media">
+          <img src="assets/neighborhood-detroit.webp" srcset="assets/neighborhood-detroit-800w.webp 800w, assets/neighborhood-detroit.webp 1400w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Residential street with homes in a Detroit neighborhood" width="1400" height="931" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS -->
+  <section class="section-tight" id="jobs">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-body">
+          <p class="eyebrow">Jobs &amp; Training</p>
+          <h3>Work that lasts — with coaching before and after you start.</h3>
+          <p>Employment at Shafanna Solutions is not a referral and a goodbye. It combines job placement, employer partnerships, and career coaching, supported by clothing, transportation navigation, training, and essentials so you can show up ready and stay employed.</p>
+          <ul>
+            <li>Job placement matched to your plan and strengths</li>
+            <li>Employer partnerships built for retention</li>
+            <li>Career coaching and advancement support</li>
+            <li>Work clothing and essentials through Meals &amp; Essentials</li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#academy">Explore Shafanna Academy</a>
+          </div>
+        </div>
+        <div class="feature-media">
+          <img src="assets/workshop-training.webp" srcset="assets/workshop-training-800w.webp 800w, assets/workshop-training.webp 1400w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Adults seated in a job training workshop, listening and taking notes" width="1400" height="772" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTREPRENEURSHIP -->
+  <section class="section-tight" id="entrepreneurship">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media">
+          <img src="assets/workshop-training.webp" srcset="assets/workshop-training-800w.webp 800w, assets/workshop-training.webp 1400w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Adults seated in a business class workshop, listening and taking notes" width="1400" height="772" loading="lazy" decoding="async">
+        </div>
+        <div class="feature-body">
+          <p class="eyebrow">Entrepreneurship &amp; Small Business</p>
+          <h3>Build the business — with classes, coaching, and a plan lenders can read.</h3>
+          <p>Shafanna Solutions helps entrepreneurs turn an idea or an early-stage business into something sustainable. Support is practical and step-by-step, whether you are starting from scratch, formalizing work you already do, or preparing to grow.</p>
+          <ul>
+            <li><strong>Business Classes</strong> — practical classes hosted through Shafanna Academy, covering starting, running, and growing a small business</li>
+            <li>Startup coaching — choosing a structure, registering, and setting up the basics</li>
+            <li>Business-planning coaching — writing and refining a plan you can actually use</li>
+            <li>Help preparing to work with lenders and small-business programs — organizing financials, documents, and next steps before you apply</li>
+            <li>Connection to employment, essentials, and family support while you build</li>
+          </ul>
+          <p class="feature-note"><strong>Hosted by Shafanna Academy:</strong> Business Classes are part of the Academy calendar, so entrepreneurs learn alongside the same wraparound support — coaching, food, and navigation stay connected while you build.</p>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#academy">Explore Shafanna Academy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOMEBUYER EDUCATION -->
+  <section class="section-tight" id="homebuyer">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-body">
+          <p class="eyebrow">Homebuyer Education</p>
+          <h3>Home buyer classes — so you buy ready, not rushed.</h3>
+          <p>Buying a first home is a milestone and a process. Shafanna Solutions will offer home buyer classes and one-on-one navigation to help Detroit residents prepare with confidence — from first budget to closing readiness.</p>
+          <ul>
+            <li><strong>Home buyer classes</strong> — a clear walk-through of the homebuying process, step by step</li>
+            <li>Homebuyer readiness — knowing when you are ready and what to do next</li>
+            <li>Budgeting and credit preparation — building the financial foundation lenders look for</li>
+            <li>Understanding mortgages — terms, costs, and questions to ask before you sign</li>
+            <li>Navigation to down-payment assistance programs — help finding and applying to programs you may qualify for</li>
+          </ul>
+          <p class="feature-note">Shafanna Solutions provides education and navigation/referrals for homebuyers. Shafanna Solutions is not HUD-certified and is not MSHDA-approved at this time; where a certified program is required, your navigator will connect you to an approved provider or program.</p>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#academy">Explore Shafanna Academy</a>
+          </div>
+        </div>
+        <div class="feature-media">
+          <img src="assets/neighborhood-detroit.webp" srcset="assets/neighborhood-detroit-800w.webp 800w, assets/neighborhood-detroit.webp 1400w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Residential street with homes in a Detroit neighborhood" width="1400" height="931" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTH -->
+  <section class="section band-alt" id="health">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Health &amp; Recovery</p>
+          <h2>Navigation and referrals — clearly and honestly.</h2>
+          <p class="lead">Shafanna Solutions plans to help people enroll in and navigate Michigan Medicaid and other benefits, and connect them to independent, licensed behavioral-health and treatment providers.</p>
+          <p class="prose">Shafanna Solutions does <strong>not</strong> provide clinical care and does <strong>not</strong> bill Medicaid. Any clinical care would be provided by independent, licensed healthcare providers through future referral arrangements — not by Shafanna Solutions; Shafanna Solutions’ planned role is to help you access care, understand coverage, and stay connected as part of your overall plan.</p>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#services">Explore Services</a>
+          </div>
+        </div>
+        <div class="card card-accent">
+          <h3>What this includes</h3>
+          <ul class="health-bullets">
+            <li>Medicaid navigation — enrollment help, renewals, and understanding coverage</li>
+            <li>Benefits navigation alongside housing, food, and family support</li>
+            <li>Behavioral-health referrals to licensed providers</li>
+            <li>Substance-use treatment referrals and recovery support connections</li>
+            <li>Follow-up through your navigator, so a referral doesn’t become a dead end</li>
+          </ul>
+          <img class="card-media" src="assets/groceries-volunteers.webp" alt="Volunteers handing groceries to community members at an outdoor distribution in Detroit" width="1024" height="683" loading="lazy" decoding="async">
+          <p class="media-caption">Community-based support in Detroit — food distribution as one part of a coordinated pathway, not a standalone stop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEALS -->
+  <section class="section-tight" id="meals">
+    <div class="wrap">
+      <div class="meals-stack">
+        <div class="feature">
+          <div class="feature-media">
+            <img src="assets/food-distribution.webp" srcset="assets/food-distribution-800w.webp 800w, assets/food-distribution.webp 1200w" sizes="(max-width: 54rem) 100vw, 48vw" alt="Volunteers distributing food outdoors in Detroit" width="1200" height="801" loading="lazy" decoding="async">
+          </div>
+          <div class="feature-body">
+            <p class="eyebrow">Meals &amp; Essentials</p>
+            <h3>Food, clothing, and the essentials that dignity requires.</h3>
+            <p>No one should have to choose between eating and rebuilding. Shafanna Solutions will coordinate meals, pantry assistance, and a community kitchen alongside work clothing, hygiene kits, and household necessities.</p>
+            <ul>
+              <li>Meals and pantry assistance</li>
+              <li>Community kitchen as a gathering and support point</li>
+              <li>Work clothing for interviews and first days on the job</li>
+              <li>Hygiene kits and household necessities</li>
+            </ul>
+            <div class="action-row">
+              <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+              <a class="btn btn-outline btn-sm" href="#volunteer">Volunteer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-media">
+            <img src="assets/kitchen-service.webp" alt="A worker preparing food behind a service counter in a community kitchen" width="1024" height="683" loading="lazy" decoding="async">
+          </div>
+          <div class="feature-body">
+            <p class="eyebrow">Household Stabilization</p>
+            <h3>Family Support, woven in</h3>
+            <p>Benefits assistance, childcare referrals, and family stabilization are part of the same plan — because when a family is stable, employment, housing, and health progress is more likely to hold.</p>
+            <p>Your navigator coordinates family support alongside every other service, rather than sending you to a separate office to start over.</p>
+            <div class="action-row">
+              <a class="btn btn-outline btn-sm" href="#get-help">Get Help</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY -->
+  <section class="section band-alt" id="academy">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">Shafanna Academy</p>
+          <h2>Credentials that open doors, on a schedule that respects real life.</h2>
+          <p class="lead">Shafanna Academy is the planned education arm of Shafanna Solutions: GED pathways, workforce certifications, and original classes designed around employer and community needs — including Business Classes for entrepreneurs and home buyer classes for first-time buyers.</p>
+          <p class="prose">Academy learning is paired with the wraparound model — coaching, essentials, food, and housing navigation stay connected while you study, so education doesn’t compete with survival. Shafanna Academy will host Shafanna Solutions’ Business Classes and homebuyer education, so learning connects directly to coaching and next steps.</p>
+          <div class="note-box">
+            <strong>Licensure &amp; planned tracks:</strong> Shafanna Solutions is not yet an accredited or licensed school, proprietary vocational school, or FMCSA Training Provider Registry provider. Any future vocational, Tech Skills, or CDL driver-training tracks would be offered only through independent, qualified/registered training partners or after all required state, licensing, and FMCSA Entry-Level Driver Training (ELDT) approvals are secured.
+          </div>
+          <div class="action-row">
+            <a class="btn btn-primary" href="#get-help">Get Help</a>
+            <a class="btn btn-outline" href="#jobs">Jobs &amp; Training</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="academy-tracks">
+            <div class="track-row">
+              <h3>GED Pathways</h3>
+              <p>Structured support toward a GED, with tutoring, planning, and a navigator who helps remove barriers outside the classroom.</p>
+              <a class="inline-cta" href="#get-help">Get Help <span class="visually-hidden">with GED Pathways</span></a>
+            </div>
+            <div class="track-row">
+              <h3>Workforce Certifications</h3>
+              <p>Short, employer-connected certifications — and future referrals toward tech or commercial-driving training through qualified external providers once launched — that translate into job placement and advancement.</p>
+              <a class="inline-cta" href="#get-help">Get Help <span class="visually-hidden">with Workforce Certifications</span></a>
+            </div>
+            <div class="track-row">
+              <h3>Original Classes</h3>
+              <p>Classes created for this community — practical skills, financial stability, workplace readiness, and life skills taught with respect.</p>
+              <a class="inline-cta" href="#get-help">Get Help <span class="visually-hidden">with Original Classes</span></a>
+            </div>
+            <div class="track-row">
+              <h3>Business Classes</h3>
+              <p>Hosted through Shafanna Academy for entrepreneurs — startup basics, business planning, and preparing to work with lenders and small-business programs.</p>
+              <a class="inline-cta" href="#entrepreneurship">Explore Business Classes</a>
+            </div>
+            <div class="track-row">
+              <h3>Home Buyer Classes</h3>
+              <p>Homebuyer readiness, budgeting and credit preparation, understanding mortgages, and navigation to down-payment assistance — education and referrals, in class and one-on-one.</p>
+              <a class="inline-cta" href="#homebuyer">Explore Homebuyer Classes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTCOMES -->
+      <div class="outcomes">
+        <p class="eyebrow">Long-Term Stability</p>
+        <h2>What “finish stronger” looks like</h2>
+        <p>Shafanna Solutions measures success not by a single service delivered, but by whether stability holds across the areas that reinforce each other.</p>
+        <div class="outcome-row">
+          <div class="outcome">Stable Housing<span>A place to stay that lasts</span></div>
+          <div class="outcome">Employment Retention<span>Work kept &amp; advanced</span></div>
+          <div class="outcome">Health Access<span>Coverage &amp; care connected</span></div>
+          <div class="outcome">Education<span>Credentials completed</span></div>
+          <div class="outcome">Family Wellbeing<span>Households stabilized</span></div>
+          <div class="outcome">Ownership<span>Businesses started &amp; homes bought ready</span></div>
+        </div>
+        <div class="action-row">
+          <a class="btn btn-gold btn-sm" href="#get-help">Get Help</a>
+          <a class="btn btn-ghost-light btn-sm" href="#partner">Partner With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER / VOLUNTEER -->
+  <section class="section" id="partner">
+    <div class="wrap">
+      <p class="eyebrow">Volunteer &amp; Partner</p>
+      <h2>Build the pathway with us.</h2>
+      <p class="lead">Shafanna Solutions will be built with Detroit — employers, providers, faith and neighborhood organizations, and volunteers who want their time to connect to lasting stability, not just a single day of service.</p>
+
+      <div class="partner-grid">
+        <div class="partner-card" id="partner-card">
+          <h3>Partner With Us</h3>
+          <p>Partnerships are how a one-door model works in practice. We are especially interested in early conversations with:</p>
+          <ul>
+            <li>Employers willing to hire and retain returning citizens and underemployed adults</li>
+            <li>Licensed health, behavioral-health, and recovery providers for referrals</li>
+            <li>Housing providers and landlords</li>
+            <li>Education and certification providers for Shafanna Academy</li>
+            <li>Food, clothing, and essentials contributors</li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#services">Explore Services</a>
+            <a class="btn btn-outline btn-sm" href="#giving">Donate</a>
+          </div>
+          <p class="small-note">Partnership inquiries will open once formation is complete. This section describes the kinds of partnerships Shafanna Solutions will seek — no partnership is claimed as existing on this page.</p>
+        </div>
+        <div class="partner-card" id="volunteer">
+          <h3>Volunteer</h3>
+          <p>Volunteers will be part of the community Shafanna Solutions serves — not separate from it. Planned volunteer roles include:</p>
+          <ul>
+            <li>Community kitchen and pantry support</li>
+            <li>Clothing and essentials sorting and distribution</li>
+            <li>Tutoring and mentoring through Shafanna Academy</li>
+            <li>Career coaching, mock interviews, and workplace mentoring</li>
+            <li>Welcome and navigation support for neighbors arriving for help</li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+            <a class="btn btn-outline btn-sm" href="#giving">Donate</a>
+          </div>
+          <p class="small-note">Volunteer sign-up will open with program launch. No form on this page collects personal information.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATED & ECOSYSTEM INITIATIVES -->
+  <section class="section band-alt" id="family">
+    <div class="wrap">
+      <p class="eyebrow">Affiliated &amp; Ecosystem Initiatives</p>
+      <h2>Independent nonprofit. Shared commitment to Detroit.</h2>
+      <p class="lead">Shafanna Solutions operates independently alongside affiliated community and technology initiatives — each maintaining its own governance, legal entity, and finances.</p>
+      <div class="family-grid">
+        <div class="family-card is-here">
+          <p class="eyebrow">Proposed Nonprofit &bull; In Formation &bull; This Site</p>
+          <h3>Shafanna Solutions</h3>
+          <p>Planned 501(c)(3) nonprofit in Detroit delivering one-door wraparound navigation, reentry pathways, housing and jobs support, recovery referrals, meals, and Shafanna Academy. Governed by its own board with separate finances and EIN once formed.</p>
+          <a class="inline-cta" href="#services">Explore Services</a>
+        </div>
+        <div class="family-card">
+          <p class="eyebrow">Affiliated Enterprise &bull; In Development</p>
+          <h3>ONITAS Market</h3>
+          <p>Neighborhood grocery and fresh-food delivery concept designed around practical access to everyday groceries and produce in Detroit (planned for EBT/SNAP acceptance once retailer authorization is obtained).</p>
+          <a class="btn btn-outline btn-sm" href="https://onitas.maroon-technologies.org/" target="_blank" rel="noopener">Visit ONITAS Market<span class="visually-hidden"> (opens in new tab)</span></a>
+        </div>
+        <div class="family-card">
+          <p class="eyebrow">Ecosystem &amp; Affiliated Concepts</p>
+          <h3>LIHI, Maroon Technologies &amp; Maroon Medical</h3>
+          <p>Legal-information and housing-support portal <strong>LIHI</strong> and parent tech builder <strong>Maroon Technologies</strong>, alongside planned care-navigation and home-support concept <strong>Maroon Medical</strong> (no public website published for Maroon Medical at this time).</p>
+          <div class="action-row">
+            <a class="btn btn-outline btn-sm" href="https://lihi.maroon-technologies.org/" target="_blank" rel="noopener">Visit LIHI<span class="visually-hidden"> (opens in new tab)</span></a>
+            <a class="btn btn-outline btn-sm" href="https://maroon-technologies.org/" target="_blank" rel="noopener">Visit Maroon Technologies<span class="visually-hidden"> (opens in new tab)</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="gov-note">
+        <p><strong>Governance &amp; financial separation:</strong> Shafanna Solutions is planned as an independent nonprofit with its own board, bank accounts, and finances. There is no commingling or pass-through of funds with MAROON Technology, ONITAS Market, or Maroon Medical.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVING / DONATE DESTINATION -->
+  <section class="section-tight" id="giving">
+    <div class="wrap">
+      <div class="giving">
+        <span class="status-badge">In Formation</span>
+        <h2>Giving — opening soon, honestly.</h2>
+        <p class="prose">Thank you for wanting to give. <strong>Donations are not being accepted yet.</strong> Shafanna Solutions is currently in formation — it is not yet incorporated and is not yet a 501(c)(3), so it cannot accept tax-deductible gifts at this time and has no payment account set up.</p>
+        <p class="prose">Giving will open once formation and tax-exempt status are complete. When it does, this section will link directly to Shafanna Solutions’ official giving channel, with clear information about how gifts are governed and used. Until then, the most meaningful ways to help are to partner, volunteer when roles open, and share Shafanna Solutions’ mission with employers and providers who should be part of this work.</p>
+        <div class="action-row">
+          <a class="btn btn-primary" href="#partner">Partner With Us</a>
+          <a class="btn btn-outline" href="#volunteer">Volunteer</a>
+          <a class="btn btn-outline" href="#get-help">Get Help</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <p class="eyebrow">It’s not how you start. It’s how you finish.</p>
+        <h2>However you’re arriving, there’s a next step here.</h2>
+        <p>Seek support for yourself or your family, offer partnership as an employer or provider, give your time as a volunteer, or support the work financially once giving opens.</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="#get-help">Get Help</a>
+          <a class="btn btn-ghost-light" href="#partner">Partner With Us</a>
+          <a class="btn btn-ghost-light" href="#volunteer">Volunteer</a>
+          <a class="btn btn-ghost-light" href="#giving">Donate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <strong>Shafanna Solutions</strong>
+        </div>
+        <p class="footer-lead">A proposed, Black-founded nonprofit in formation in Detroit, Michigan. One entry point. Coordinated wraparound services. A pathway forward.</p>
+        <p class="small">“It’s not how you start. It’s how you finish.”</p>
+        <div class="action-row">
+          <a class="btn btn-primary btn-sm" href="#get-help">Get Help</a>
+          <a class="btn btn-gold btn-sm" href="#giving">Donate</a>
+          <a class="btn btn-outline btn-sm" href="#partner">Partner With Us</a>
+          <a class="btn btn-outline btn-sm" href="#volunteer">Volunteer</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Explore</p>
+        <ul class="footer-links">
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#founder">Founder &amp; CEO — Emmanuel Washington</a></li>
+          <li><a href="#team">Team Profile — Tyrone Davidson</a></li>
+          <li><a href="#attorney">Attorney &amp; Money Handler — Timothy Wiggins, Esq.</a></li>
+          <li><a href="#get-help">Get Help</a></li>
+          <li><a href="#housing">Housing &amp; Reentry</a></li>
+          <li><a href="#reentry">Reentry Services</a></li>
+          <li><a href="#jobs">Jobs &amp; Training</a></li>
+          <li><a href="#entrepreneurship">Entrepreneurship &amp; Small Business</a></li>
+          <li><a href="#homebuyer">Homebuyer Education</a></li>
+          <li><a href="#health">Health &amp; Recovery</a></li>
+          <li><a href="#meals">Meals &amp; Essentials</a></li>
+          <li><a href="#academy">Shafanna Academy</a></li>
+          <li><a href="#partner">Volunteer &amp; Partner</a></li>
+          <li><a href="#family">Affiliated &amp; Ecosystem Initiatives</a></li>
+          <li><a href="#giving">Giving</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p class="small"><strong>Status:</strong> Shafanna Solutions is in formation. It is a proposed nonprofit — not yet incorporated and not yet recognized as a 501(c)(3). Programs described here are planned services. Health services are planned as navigation and referrals to independent, licensed providers; the organization does not provide clinical care and does not bill Medicaid. No donations are being accepted at this time.</p>
+      <p class="small">Shafanna Solutions will have its own governance and finances, and may partner with MAROON Technology, ONITAS Market, and Maroon Medical when operational.</p>
+      <p class="small">Detroit, Michigan &nbsp;&bull;&nbsp; Public information site — no personal information is collected on this page.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var siteHeader = document.getElementById('siteHeader');
+  var headerInner = document.getElementById('headerInner');
+  var navToggle = document.getElementById('navToggle');
+  var primaryNav = document.getElementById('primaryNav');
+  var hasPopover = Object.hasOwn(HTMLElement.prototype, 'popover');
+
+  function syncNavState(isOpen){
+    if(!navToggle || !siteHeader) return;
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    siteHeader.classList.toggle('menu-open', isOpen);
+  }
+
+  function closeNav(returnFocus){
+    if(!primaryNav) return;
+    if(hasPopover && primaryNav.hasAttribute('popover')){
+      try{ if(primaryNav.matches(':popover-open')) primaryNav.hidePopover(); }catch(e){}
+    } else {
+      primaryNav.classList.remove('is-open');
+    }
+    syncNavState(false);
+    if(returnFocus && navToggle) navToggle.focus();
+  }
+
+  var wasWide = null;
+  function measureHeader(){
+    if(!siteHeader || !headerInner || !primaryNav) return;
+    var wasOpen = hasPopover && primaryNav.hasAttribute('popover')
+      ? primaryNav.matches(':popover-open')
+      : primaryNav.classList.contains('is-open');
+
+    siteHeader.classList.add('is-measuring', 'is-wide');
+    if(hasPopover) primaryNav.removeAttribute('popover');
+    var fits = headerInner.scrollWidth <= headerInner.clientWidth;
+
+    siteHeader.classList.toggle('is-wide', fits);
+    if(fits){
+      primaryNav.classList.remove('is-open');
+      syncNavState(false);
+    } else if(hasPopover){
+      primaryNav.setAttribute('popover', 'auto');
+      if(wasOpen){
+        try{ primaryNav.showPopover(); }catch(e){}
+      }
+    }
+    wasWide = fits;
+    requestAnimationFrame(function(){ siteHeader.classList.remove('is-measuring'); });
+  }
+
+  if(primaryNav && navToggle){
+    if(hasPopover){
+      primaryNav.addEventListener('toggle', function(e){
+        syncNavState(e.newState === 'open');
+      });
+    } else {
+      navToggle.addEventListener('click', function(){
+        if(siteHeader.classList.contains('is-wide')) return;
+        var next = !primaryNav.classList.contains('is-open');
+        primaryNav.classList.toggle('is-open', next);
+        syncNavState(next);
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape' && !siteHeader.classList.contains('is-wide') && primaryNav.classList.contains('is-open')){
+          closeNav(true);
+        }
+      });
+    }
+
+    primaryNav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        if(!siteHeader.classList.contains('is-wide')) closeNav(false);
+      });
+    });
+
+    if('ResizeObserver' in window){
+      var measureRaf = 0;
+      var ro = new ResizeObserver(function(){
+        if(wasWide === false && siteHeader.offsetWidth <= 0) return;
+        cancelAnimationFrame(measureRaf);
+        measureRaf = requestAnimationFrame(measureHeader);
+      });
+      ro.observe(siteHeader);
+      if(document.fonts && document.fonts.ready){
+        document.fonts.ready.then(measureHeader);
+      }
+    } else {
+      window.addEventListener('resize', measureHeader);
+    }
+    measureHeader();
+  }
+
+  // Fallback hide-on-scroll-down for browsers without CSS scroll-state queries
+  if(siteHeader && !CSS.supports('container-type', 'scroll-state')){
+    var lastY = window.scrollY;
+    window.addEventListener('scroll', function(){
+      var maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      var y = Math.max(0, Math.min(window.scrollY, maxScroll));
+      if(y === lastY) return;
+      siteHeader.classList.toggle('is-hidden', y > lastY && y > siteHeader.offsetHeight && !siteHeader.classList.contains('menu-open'));
+      lastY = y;
+    }, { passive: true });
+  }
+
+  // Programmatic target focusability for internal anchor jumps
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href');
+      if(id && id.length > 1){
+        var el = document.querySelector(id);
+        if(el) el.setAttribute('tabindex', '-1');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
