@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coloredinnovator.github.io/shafanna-solutions/sitemap.xml
